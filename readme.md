@@ -12,21 +12,26 @@ Es besteht aus den folgenden Hauptordnern:
     FROM ubuntu:latest
 Hier wird das Basisimage definiert, auf dessen Grundlage das Docker-Image erstellt werden soll. In diesem Fall ist es das Ubuntu-Linux-Image in der neuesten Version (latest).
 <br>
+<br>
 
     RUN apt-get update && apt-get install -y apache2 && apt-get clean:
 Hier wird das System aktualisiert und der Apache-Webserver installiert. apt-get update aktualisiert das Paket-Repository, apt-get install -y apache2 installiert den Apache-Webserver und apt-get clean löscht die temporären Dateien des Paketmanagers, um die Größe des Images zu reduzieren.
+<br>
 <br>
 
     COPY index.html /var/www/html/
 Hier wird die Datei index.html aus dem Docker-Build-Verzeichnis in das Verzeichnis /var/www/html/ im Container kopiert. Dies ist der Standardpfad für Webseiten-Dateien im Apache-Webserver.
 <br>
+<br>
 
     EXPOSE 8080
 Hier wird definiert, dass der Container Port 8080 nach außen hin öffnen kann, so dass externe Verbindungen auf den Container zugreifen können.
 <br>
+<br>
 
     CMD ["apache2ctl", "-D", "FOREGROUND"]
 Diese Zeile legt den Befehl fest, der ausgeführt wird, wenn der Container gestartet wird. Hier wird der Apache-Webserver im Vordergrundmodus gestartet, so dass er auf eingehende Anforderungen reagieren kann.
+<br>
 <br>
 
 ## Portfolio
