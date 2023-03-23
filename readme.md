@@ -50,7 +50,7 @@ Dannach gibt man den folgenden Befehl ein:
 
     docker run -p 'port':80 -v 'PfadZuOrdner':/var/www/html -v 'PfadZuOrdner'/logs:/var/log/apache2 'ImageName'
 
-Dadurch startet man das Image auf dem angegebenen Port.
+Dadurch startet man das Image auf dem angegebenen Port.(Dieser Fehler darf auftreten)
 ![Run](./Bilder/Run.png)
 
 ## Überprüfen
